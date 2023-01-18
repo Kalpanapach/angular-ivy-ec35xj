@@ -1,0 +1,19 @@
+<style></style>
+
+<p>login works!</p>
+
+<div [ngSwitch]="testcolour">
+  <h1 *ngSwitchCase="'green'">Test color if style green</h1>
+  <h1 *ngSwitchCase="'red'">Test color if style red</h1>
+  <h1 *ngSwitchCase="'purple'">Test color if style purple</h1>
+  <h1 *ngSwitchDefault>Test color if default</h1>
+</div>
+
+<h1 *ngIf="testcolour == 'green'">This is if loop</h1>
+<h1 *ngIf="testcolour == 'red'">This is if red loop</h1>
+
+<div *ngIf="testcolour == 'red' ; then ifdiv"></div>
+
+<ng-template #ifdiv>
+  <h1>testing if in div</h1>
+</ng-template>
